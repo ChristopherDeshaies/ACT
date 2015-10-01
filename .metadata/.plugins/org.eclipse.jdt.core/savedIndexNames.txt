@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\Christopher\Documents\Cours + Papier Important\Dossier Master\A2\S1\ACT\.metadata\.plugins\org.eclipse.jdt.core
+3108431294.index

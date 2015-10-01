@@ -1,0 +1,10 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Integer[][] lignedetoit1 = {{1,10},{5,6},{8,0},{10,8},{12,0}};
+
+	}
+
+}
