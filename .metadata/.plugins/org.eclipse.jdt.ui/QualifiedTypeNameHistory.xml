@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="modele.LigneDeToit"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="javafx.scene.control.TabPane.TabClosingPolicy"/>
+<fullyQualifiedTypeName name="util.Simulate4D"/>
 </qualifiedTypeNameHistroy>
