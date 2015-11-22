@@ -2,7 +2,6 @@ package travellingSalemansProblem;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 import until.Methode;
@@ -15,6 +14,7 @@ public class CertificatTSP implements Certificat{
 	public int nbCertificatMax;
 	public String certificat;
 	public String certificatSaisie;
+	public String certificatGenerer;
 	private Scanner scanner;
 	public int numCertificat = 0;
 	
@@ -37,11 +37,29 @@ public class CertificatTSP implements Certificat{
 		this.tsp = tsp;
 	}
 
-	public Boolean valideCertificat(){
+	public Boolean valideCertificatSaisie(){
 		if(tableauSolution.isEmpty())
 			reset();
 		
 		if(tableauSolution.contains(certificatSaisie))
+			return true;
+		
+		return false;
+	}
+
+	public Boolean valideCertificatGenerer(){
+		if(tableauSolution.isEmpty())
+			reset();
+		
+		if(tableauSolution.contains(this.certificatGenerer))
+			return true;
+		
+		return false;
+	}
+	
+	public Boolean valideCertificat(){
+		
+		if(tableauSolution.contains(this.certificat))
 			return true;
 		
 		return false;
@@ -112,6 +130,11 @@ public class CertificatTSP implements Certificat{
 	
 	
 	
+	
+	
+	
+	
+	
 	@Override
 	public void saisie() {	/** Methode "verification" propose à l'utilisateur de saisir un certificat et vérifie sa validité **/
 		usage();
@@ -119,31 +142,33 @@ public class CertificatTSP implements Certificat{
 		certificatSaisie = scanner.nextLine();		
 	}
 
-	
-	
+
 	@Override
 	public void display() {
-		System.out.println("Les certificats pour ce problème sont : ");
-		for(int i=0;i<tableauSolution.size();i++)
-			System.out.println(tableauSolution.get(i));
+		System.out.println("Certificat existant : "+certificat);
 	}
 
 	
-	
 	@Override
 	public void alea() {
-		if(tableauSolution.isEmpty())
-			reset();
-			
-		/** Ssi tous les certificats sont en memoire **/
-		if(tableauSolution.size() == nbCertificatMax){
-			Random random = new Random();
-			int pointeurCertficat = random.nextInt(tableauSolution.size());
-			certificat = tableauSolution.get(pointeurCertficat);
-		}else{
-				
-		}
 		
+		int prochain;
+		
+		List<Integer> listValeur = new ArrayList<Integer>();
+		listValeur.add( (int)( Math.random()*( this.getTsp().nbVilles - 1 + 1 ) ) + 1 );
+		
+		while( listValeur.size() < ( this.getTsp().nbVilles  ) ){
+			if(  !listValeur.contains( ( prochain = (int)( Math.random()*( this.getTsp().nbVilles - 1 + 1 ) ) + 1 ) ) ){
+				listValeur.add( prochain );
+			}
+		}	
+		listValeur.add(listValeur.get(0));
+		
+		this.certificatGenerer="";
+		for(int i=0; i < listValeur.size(); i++)
+			this.certificatGenerer += listValeur.get(i);
+		
+		System.out.print("Certificat générer : "+ this.certificatGenerer + " est valide ? ");
 	}
 
 	@Override
@@ -183,7 +208,7 @@ public class CertificatTSP implements Certificat{
 		
 		/** Recuperation du premier certificat **/
 		certificat = tableauSolution.get(numCertificat);	
-		
+		numCertificat++;
 	}
 
 }

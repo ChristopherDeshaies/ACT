@@ -1,4 +1,2 @@
 INDEX VERSION 1.127+C:\Users\Christopher\Documents\Cours + Papier Important\Dossier 2015 - Master\A2\S1\ACT\.metadata\.plugins\org.eclipse.jdt.core
-2659081177.index
 4003463226.index
-4275381087.index

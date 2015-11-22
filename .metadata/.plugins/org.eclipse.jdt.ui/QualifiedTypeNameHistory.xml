@@ -2,13 +2,20 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="datastructures.DataStructure"/>
 <fullyQualifiedTypeName name="comparaisons.Mesures"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="datastructures.Liste"/>
 <fullyQualifiedTypeName name="modele.LigneDeToit"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TabPane.TabClosingPolicy"/>
 <fullyQualifiedTypeName name="util.Simulate4D"/>
+<fullyQualifiedTypeName name="travellingSalemansProblem.CertificatTSP"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="until.Methode"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.lang.TypeNotPresentException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

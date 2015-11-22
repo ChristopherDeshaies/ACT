@@ -21,11 +21,12 @@ public class TSP extends NP{
 	public boolean estCorrect(Certificat c){
 		
 		while( c.estDernier() ){
-			c.suivant();
-			if(c.valideCertificat())
+
+			if(c.valideCertificatSaisie())
 				return true;
 		}
 		return false;
 	}
+
 
 }

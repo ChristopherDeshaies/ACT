@@ -1,3 +1,4 @@
 1448137432434	Inline local variable 'sc'
 1448137450400	Extract local variable 'scanner'
 1448137454838	Convert local variable 'scanner' to field
+1448148828103	Rename method 'valideCertificat'

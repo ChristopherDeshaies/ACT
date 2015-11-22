@@ -24,6 +24,14 @@ public interface Certificat {
 	//comportement non defini si la certificat est le dernier
 	public void suivant();
 	
-	//verifie que le certificat en cours est bien valide
+	//verifie qu'un certificat existe
 	public Boolean valideCertificat();
+	
+	//verifie que le certificat saisie est bien valide
+	public Boolean valideCertificatSaisie();
+	
+	//verifie que le certificat genere est bien valide
+	public Boolean valideCertificatGenerer();
+	
+	
 }

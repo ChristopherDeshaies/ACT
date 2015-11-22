@@ -12,6 +12,7 @@ public static void main(String[] arg) throws Exception {
 	else {
 		int lg=Integer.parseInt(arg[2]);	
 		//le probleme dans un fichier de donnees
+		@SuppressWarnings("resource")
 		Scanner donnee = new Scanner (new FileReader(arg[1]));
 		
 		for (int i=0; i<3; i++) donnee.nextLine();
@@ -39,11 +40,11 @@ public static void main(String[] arg) throws Exception {
 			
 			System.out.print("Votre certificat est-il correct? ");
 			System.out.println(pb.estCorrect(c));
-			c.display();
+
     	}else if (arg[0].equals("-nondet")) {
     		System.out.println(pb.aUneSolutionNonDeterministe());
         }else if (arg[0].equals("-exhaust"))  { 
-        	System.out.println("le probleme a-t-il une solution?: ");
+        	System.out.println("le probleme a-t-il une solution? ");
         	System.out.println(pb.aUneSolution());
     	}else
     		System.out.println("erreur de mode");
