@@ -11,6 +11,7 @@ public static void main(String[] arg) throws Exception {
 	    System.out.println("java testTSP  mode file.atsp lg");
 	else {
 		int lg=Integer.parseInt(arg[2]);	
+		
 		//le probleme dans un fichier de donnees
 		@SuppressWarnings("resource")
 		Scanner donnee = new Scanner (new FileReader(arg[1]));

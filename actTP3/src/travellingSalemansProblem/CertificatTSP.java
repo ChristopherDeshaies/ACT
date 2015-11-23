@@ -84,6 +84,9 @@ public class CertificatTSP implements Certificat{
 				if(!tableauSolution.contains(parcours))
 					tableauSolution.add(parcours);
 				
+				System.out.println("Certif généré ! ");
+			}else{
+				System.out.println("Certif non valide ");
 			}
 		}
 		
@@ -110,6 +113,8 @@ public class CertificatTSP implements Certificat{
 						genererAllCertificat( valeurTourneeTmp  ,listTmp);
 						
 						listTmp.remove(listTmp.size()-1);
+					}else{
+						System.out.println("Certif non valide ");
 					}
 				}else{ /** Sinon on initialise **/
 					listTmp.add(i);
@@ -181,7 +186,8 @@ public class CertificatTSP implements Certificat{
 		genererAllCertificat(0, new ArrayList<Integer>());
 		
 		/** Recup du premier certificat dans la liste **/
-		certificat = tableauSolution.get(numCertificat);
+		if(tableauSolution.isEmpty()) System.out.println("Pas de solution");
+		else certificat = tableauSolution.get(numCertificat);
 		
 	}
 
@@ -207,8 +213,10 @@ public class CertificatTSP implements Certificat{
 			numCertificat = 0;
 		
 		/** Recuperation du premier certificat **/
-		certificat = tableauSolution.get(numCertificat);	
-		numCertificat++;
+		if(!tableauSolution.isEmpty()){
+			certificat = tableauSolution.get(numCertificat);	
+			numCertificat++;
+		}
 	}
 
 }

@@ -1,0 +1,39 @@
+package hamiltonPath;
+
+import hamiltonCycle.HC;
+import travellingSalemansProblem.TSP;
+import classesPb.NP;
+
+public class HP {
+
+	public int nbVilles;
+	public boolean[][] distances;
+	
+	public HP(int nbVilles, boolean[][] distances){
+		this.nbVilles=nbVilles;
+		this.distances=distances;
+	}
+	
+	public NP red() {
+		
+		int [][] distancesRed = new int[nbVilles][nbVilles];
+		String [] nomVille = new String[nbVilles];
+		
+		/** Initialisation de la matrice HC - 1 = true et autre = false **/
+		for(int i=0;i < distances.length;i++){
+			for(int j=0;j < distances[i].length; j++){
+				if(distances[i][j]==true)distancesRed[i][j]=1;
+				else distancesRed[i][j]= (int)( Math.random()*( 10 - 3 + 1 ) ) + 3;
+				System.out.println(distancesRed[i][j]);
+			}
+			System.out.println(" ");
+		}
+		/** Initialisation des nom de villes **/
+		for(int i=0;i < distances.length;i++)
+			nomVille[i] = String.valueOf(i);
+		
+		HC reducPoly = new HC(nbVilles,distancesRed);
+		return reducPoly;
+		
+	}
+}

@@ -1,0 +1,28 @@
+package hamiltonCycle;
+
+import travellingSalemansProblem.CertificatTSP;
+
+public class HC {
+	
+	public int nbVilles;
+	public boolean[][] distances;
+	
+	public HC(int nbVilles, boolean[][] distances){
+		this.nbVilles=nbVilles;
+		this.distances=distances;
+	}
+	
+	public TSP reductionPolyTSP() {
+		
+		int [][] distancesRed = new int[nbVilles][nbVilles];
+		
+		for(int i=0;i < distances.length;i++)
+			for(int j=0;j < distances[i].length; j++)
+				if(distances[i][j]==true)distancesRed[i][j]=1;
+				else distancesRed[i][j]=3;
+		
+		TSP reducPoly = new TSP();
+		return reducPoly;
+	}
+	
+}
