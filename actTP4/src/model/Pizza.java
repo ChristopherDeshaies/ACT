@@ -1,0 +1,95 @@
+package model;
+
+
+public class Pizza {
+
+	
+	/**
+	 * Variables de base
+	 */
+	private int longueur;
+	private int largueur;
+	
+	/**
+	 * Nombres MAXIMUM de case dans une part de pizza 
+	 * 
+	 * - 	0 à taillePart
+	 */
+	private int taillePart;
+	/**
+	 * Nombres de jambon MINIMUM par part de pizza 
+	 * 
+	 * -	nbJambon à taillePart
+	 */
+	private int nbJambon;
+	
+	/**
+	 * Tableau contenant ma pizza
+	 */
+	public boolean [][] pizza;
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Contructeur - Initialisation du problème
+	 * @param longueur
+	 * @param largueur
+	 * @param taillePart
+	 * @param nbJambon
+	 */
+	public Pizza(int longueur, int largueur, int taillePart, int nbJambon, boolean[][] pizza){
+		this.longueur=longueur;
+		this.largueur=largueur;
+		
+		this.taillePart=taillePart;
+		this.nbJambon=nbJambon;
+		
+		this.pizza=pizza;
+	}
+
+	
+	
+	
+	/**************************************************************************************
+	 * 										Getter
+	 * 										Setter
+	 **************************************************************************************/
+	
+	public int getLongueur() {
+		return longueur;
+	}
+
+	public void setLongueur(int longueur) {
+		this.longueur = longueur;
+	}
+
+	public int getLargueur() {
+		return largueur;
+	}
+
+	public void setLargueur(int largueur) {
+		this.largueur = largueur;
+	}
+
+	public int getTaillePart() {
+		return taillePart;
+	}
+
+	public void setTaillePart(int taillePart) {
+		this.taillePart = taillePart;
+	}
+
+	public int getNbJambon() {
+		return nbJambon;
+	}
+
+	public void setNbJambon(int nbJambon) {
+		this.nbJambon = nbJambon;
+	}
+	
+	
+}
