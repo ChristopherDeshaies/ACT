@@ -1,0 +1,40 @@
+package model;
+
+public class CoupePossiblePizza {
+
+	public int nbJambon;
+	public int taillePart;
+	public boolean[][] partPizza;
+	
+	public CoupePossiblePizza(int nbJambon, int taillePart){
+		this.nbJambon=nbJambon;
+		this.taillePart=taillePart;
+		
+		partPizza = new boolean[1][1];
+		partPizza[0][0]=true;
+	}
+	
+	/**
+	 * Debut avec x = 1 et y = 1
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	public boolean[][] partPossibleSuivante(int x, int y){
+		int xTmp=1;
+		int yTmp=1;
+		
+		//Fin des part possible
+		if( y > taillePart )
+			return null;
+		
+		if( ( x * (y+1) ) > taillePart ){
+			xTmp = x;
+			yTmp = y+1;
+		}else{
+			yTmp = y+1;
+		}
+
+		return new boolean[xTmp][yTmp];
+	}
+}

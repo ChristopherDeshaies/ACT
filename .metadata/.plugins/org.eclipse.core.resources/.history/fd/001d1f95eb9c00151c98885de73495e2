@@ -1,0 +1,26 @@
+package certificat;
+
+import model.Pizza;
+
+public class CertificatProbPizza {
+
+	private Pizza probPizza;
+	public int nbParts;
+	
+	public boolean [][] partExploiter;
+	
+	public CertificatProbPizza(Pizza probPizza){
+		this.probPizza = probPizza;
+	}
+	
+	public void resolve(){
+		//Condition d'erreur
+		
+		
+		
+		for(int i=0;i<partExploiter.length;i++)
+			for(int j=0;j<partExploiter[i].length;j++)
+				if(partExploiter[i][j]==true)
+					System.out.println("Solution trouvé ! Return certificat ");
+	}
+}

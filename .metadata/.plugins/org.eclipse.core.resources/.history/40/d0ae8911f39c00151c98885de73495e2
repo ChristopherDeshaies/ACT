@@ -1,0 +1,17 @@
+package model;
+
+public class CoupePossiblePizza {
+
+	public int nbJambon;
+	public int taillePart;
+	public boolean[][] partPizza;
+	
+	public CoupePossiblePizza(int nbJambon, int taillePart){
+		this.nbJambon=nbJambon;
+		this.taillePart=taillePart;
+	}
+	
+	public boolean[][] partPossibleSuivante(){
+		
+	}
+}

@@ -21,7 +21,7 @@ public class Pizza {
 	 * 
 	 * -	nbJambon à taillePart
 	 */
-	private int nbJambon;
+	private int nbJambonPart;
 	
 	/**
 	 * Tableau contenant ma pizza
@@ -46,7 +46,7 @@ public class Pizza {
 		this.largueur=largueur;
 		
 		this.taillePart=taillePart;
-		this.nbJambon=nbJambon;
+		this.nbJambonPart=nbJambon;
 		
 		this.pizza=pizza;
 	}
@@ -84,11 +84,11 @@ public class Pizza {
 	}
 
 	public int getNbJambon() {
-		return nbJambon;
+		return nbJambonPart;
 	}
 
 	public void setNbJambon(int nbJambon) {
-		this.nbJambon = nbJambon;
+		this.nbJambonPart = nbJambon;
 	}
 	
 	

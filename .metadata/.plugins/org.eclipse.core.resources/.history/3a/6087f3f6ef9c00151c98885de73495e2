@@ -1,0 +1,51 @@
+package certificat;
+
+import model.Pizza;
+
+public class CertificatProbPizza {
+
+	private Pizza probPizza;
+	public int nbParts;
+	
+	public boolean [][] partExploiter;
+	
+	public CertificatProbPizza(Pizza probPizza){
+		this.probPizza = probPizza;
+	}
+	
+	public void resolve(){
+		//Condition d'erreur
+		if(probPizza.getNbJambon()==0)	//Si 0 jambon
+			return;
+		
+		for(int i=0;i<partExploiter.length;i++)
+			for(int j=0;j<partExploiter[i].length;j++)
+				if(partExploiter[i][j]==true)
+					System.out.println("Solution trouvé ! Return certificat ");
+		
+		
+	}
+	
+	public int decoupe(boolean[][] partDecoupe){
+		
+		if(perteDecoupe()==0) //Une solution trouvé
+			return 0;
+		else{
+			
+			
+		}
+			
+		return 2;
+	}
+	
+	public int perteDecoupe(){
+		int perte=0;
+		for(int i=0;i<partExploiter.length;i++)
+			for(int j=0;j<partExploiter[i].length;j++)
+				if(partExploiter[i][j]==false)
+					perte++;
+		
+		return perte;
+	}
+	
+}
